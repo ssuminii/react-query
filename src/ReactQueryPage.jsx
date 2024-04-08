@@ -30,9 +30,13 @@ const ReactQueryPage = () => {
     if(isError) {
         return <h1>{error.message}</h1>
     }
-    
+
   return (
-    <div>ReactQueryPage</div>
+    <div>
+        {data.map((item) => (
+            <div>{item.title}</div>
+        ))}
+    </div>
   )
 }
 
